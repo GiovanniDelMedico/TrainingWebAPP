@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+:root {
+  --graphite: #1a1a1a;
+  --graphite-light: #2a2a2a;
+  --vite-purple: #646cff;
+  --vite-purple-dark: #535bf2;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+}

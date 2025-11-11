@@ -1,0 +1,45 @@
+export const DEFAULT_EXERCISES = {
+  foundation: [
+    "Running Man",
+    "Bart Simpson",
+    "Kriss Kross",
+    "Steve Martin",
+    "Monastery",
+    "Roof Top",
+    "Happy Feet",
+    "Prep",
+    "The Fila"
+  ],
+  technique: [
+    "Footworks",
+    "Giri",
+    "Suolo",
+    "Isolazioni",
+    "Waves",
+    "Slides",
+    "Forme",
+    "Linee",
+    "Livelli",
+    "Spazi",
+    "Attitude",
+    "Off/On balance",
+  ],
+  musicality: [
+    "Kick",
+    "Uno",
+    "Doppio tempo",
+    "Atmosfera",
+    "Pause",
+    "Ritmiche",
+    "Solo hi-hat",
+    "Liriche",
+  ],
+  creativity: [
+    "Animali",
+    "Sedia",
+    "Ballare con un oggetto",
+    "Alternare leggerezza a pesantezza(gravità 100 vs 0)",
+    "Pavimento scivoloso",
+    "Storytelling",
+  ]
+};
