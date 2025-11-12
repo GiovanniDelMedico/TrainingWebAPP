@@ -15,7 +15,7 @@ export default function Modal({ open, onClose, title, children }) {
           {title}
         </h2>
 
-        <div className="space-y-4">{children}</div>
+        <div className="modal-content space-y-4 max-h-[70vh] overflow-y-auto pr-2">{children}</div>
 
         <button
           onClick={onClose}

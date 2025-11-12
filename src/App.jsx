@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import CategoryCard from "./components/Cards/CategoryCard.jsx";
 import { DEFAULT_EXERCISES } from "./Data/exercises.js";
 import WeekCalendar from "./components/Calendar/WeekCalendar.jsx";
@@ -7,10 +7,14 @@ export default function App() {
   return (
     <Router>
       <div className="min-h-screen bg-[var(--graphite)] text-[var(--text-primary)] p-6">
-        <header className="flex  justify-between mb-8">
-          <h1 className="text-4xl font-bold text-[var(--vite-purple)]">
+        <header className="flex justify-between mb-8">
+          <Link
+            to="/"
+             className=" p-1 md:p-2 flex items-center justify-center rounded-md  text-[var(--vite-purple-dark)] text-base md:text-3xl font-semibold  transition border-2"
+          >
             Training HH Web App
-          </h1>
+          </Link>
+
           <nav className="flex flex-col text-xl md:flex-row md:space-x-4 space-y-2 md:space-y-0">
             <Link to="/" className="hover:text-[var(--vite-purple-dark)]">
               Allenamenti

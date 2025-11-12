@@ -9,9 +9,17 @@ export default function CategoryCard({ label, exercises = [], icon }) {
   const [feedback, setFeedback] = useState(null);
   const { addTraining } = useTraining();
 
+  const scrollToTop = () => {
+  const modalContent = document.querySelector(".modal-content");
+  if (modalContent) {
+    modalContent.scrollTo({ top: 0, behavior: "smooth" });
+  }
+};
+
   const chooseExercise = (name) => {
     addTraining(label, name);
     setFeedback({ text: name, color: "text-sky-400" });
+    scrollToTop();
   };
 
   const chooseRandom = () => {
@@ -20,6 +28,7 @@ export default function CategoryCard({ label, exercises = [], icon }) {
     const name = exercises[i];
     addTraining(label, name);
     setFeedback({ text: name, color: "text-sky-400" });
+    scrollToTop();
   };
 
   const addManual = () => {
@@ -27,6 +36,7 @@ export default function CategoryCard({ label, exercises = [], icon }) {
     if (!name) return;
     chooseExercise(name);
     setManualName("");
+    scrollToTop();
   };
 
   return (

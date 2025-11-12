@@ -23,19 +23,25 @@ export default function WeekCalendar() {
 
   return (
     <div className="p-6 bg-[var(--graphite-light)] rounded-xl border border-[var(--vite-purple)] shadow-xl items-center text-center">
-      <h2 className="text-3xl font-bold text-[var(--vite-purple)] mb-6 ">Storico allenamenti</h2>
+      <h2 className="text-3xl font-bold text-[var(--vite-purple)] mb-6">
+        Storico allenamenti
+      </h2>
 
       {sortedDates.length === 0 ? (
-        <p className="text-[var(--text-secondary)] text-center">Nessun allenamento registrato.</p>
+        <p className="text-[var(--text-secondary)] text-center">
+          Nessun allenamento registrato.
+        </p>
       ) : (
-        sortedDates.map((date) => (
-          <DayBlock
-            key={date}
-            date={date}
-            trainings={grouped[date]}
-            removeTraining={removeTraining}
-          />
-        ))
+        <div className="flex flex-col gap-6">
+          {sortedDates.map((date) => (
+            <DayBlock
+              key={date}
+              date={date}
+              trainings={grouped[date]}
+              removeTraining={removeTraining}
+            />
+          ))}
+        </div>
       )}
     </div>
   );
